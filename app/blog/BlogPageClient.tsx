@@ -131,7 +131,7 @@ export function BlogPageClient({
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">
-              {selectedTag ? `Posts tagged "${selectedTag}"` : 'Latest Posts'}
+              {selectedTag ? `Posts tagged "${selectedTag}"` : 'Latest Postss'}
               {filteredPosts.length > 0 && (
                 <span className="ml-2 text-sm font-normal text-muted-foreground">
                   ({filteredPosts.length}{' '}
