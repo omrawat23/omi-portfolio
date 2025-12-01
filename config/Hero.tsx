@@ -97,7 +97,7 @@ export const heroConfig = {
     {
       variant: 'outline',
       text: 'Resume / CV',
-      href: '/resume',
+      href: 'https://www.omrawat.xyz/Om%20Rawat%20Resume.pdf',
       icon: 'CV',
     },
     {

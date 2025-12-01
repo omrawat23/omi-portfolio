@@ -12,20 +12,20 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "https://assets.chanhdai.com/images/link-icons/x.webp?t=1759581475",
     title: "X",
-    description: "@iamncdai",
-    href: "https://x.com/iamncdai",
+    description: "@omraw29",
+    href: "https://x.com/omraw29",
   },
   {
     icon: "https://assets.chanhdai.com/images/link-icons/github.webp?t=1759581475",
     title: "GitHub",
-    description: "ncdai",
-    href: "https://github.com/ncdai",
+    description: "omraw29",
+    href: "https://github.com/omrawat23",
   },
   {
     icon: "https://assets.chanhdai.com/images/link-icons/linkedin.webp?t=1759581475",
     title: "LinkedIn",
-    description: "ncdai",
-    href: "https://linkedin.com/in/ncdai",
+    description: "omraw29",
+    href: "https://linkedin.com/in/omrawat23",
   },
   {
     icon: "https://i.pinimg.com/736x/88/e1/4c/88e14cc7e7fcbb0e0e09de26cec86c61.jpg",
