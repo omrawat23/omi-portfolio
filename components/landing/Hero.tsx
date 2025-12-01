@@ -108,33 +108,35 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Buttons */}
-      <div className="mt-8 flex gap-4">
-        {buttons.map((button, index) => {
-          const IconComponent =
-            buttonIcons[button.icon as keyof typeof buttonIcons];
-          return (
-            <Button
-              key={index}
-              variant={button.variant as 'outline' | 'default'}
-              className={cn(
-                button.variant === 'outline' &&
-                  'inset-shadow-indigo-500',
-                button.variant === 'default' &&
-                  'inset-shadow-indigo-500',
-              )}
-            >
-              {IconComponent && <IconComponent />}
-              <Link href={button.href}>
-                <span className="block sm:hidden">
-                  {button.text === 'Resume / CV' ? 'Resume' : 'Contact'}
-                </span>
-                <span className="hidden sm:block">{button.text}</span>
-              </Link>
-            </Button>
-          );
-        })}
-      </div>
+        {/* Buttons */}
+        <div className="mt-8 flex gap-4">
+          {buttons.map((button, index) => {
+            const IconComponent =
+          buttonIcons[button.icon as keyof typeof buttonIcons];
+            const linkProps =
+          index === 0 ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+            return (
+          <Button
+            key={index}
+            variant={button.variant as 'outline' | 'default'}
+            className={cn(
+              button.variant === 'outline' &&
+            'inset-shadow-indigo-500',
+              button.variant === 'default' &&
+            'inset-shadow-indigo-500',
+            )}
+          >
+            {IconComponent && <IconComponent />}
+            <Link href={button.href} {...linkProps}>
+              <span className="block sm:hidden">
+            {button.text === 'Resume / CV' ? 'Resume' : 'Contact'}
+              </span>
+              <span className="hidden sm:block">{button.text}</span>
+            </Link>
+          </Button>
+            );
+          })}
+        </div>
 
       {/* Social Links (aligned to flex-start) */}
       <div className="mt-8 flex flex-wrap items-start justify-start gap-2 md:gap-4">
