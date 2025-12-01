@@ -30,10 +30,8 @@ export default function RootLayout({
               <SiteHeader />
               {children}
               <OnekoCat />
-              {/* <Quote /> */}
               <Footer />
               <DynamicChatBubble />
-              {/* <UmamiAnalytics /> */}
             </ReactLenis>
           </ThemeProvider>
         </body>

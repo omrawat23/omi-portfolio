@@ -30,7 +30,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "https://i.pinimg.com/736x/88/e1/4c/88e14cc7e7fcbb0e0e09de26cec86c61.jpg",
     title: "Gmail",
-    description: "omraw29@gmail.com",
+    description: "omraw29",
     href: "mailto:omraw29@gmail.com",
   },
 ];

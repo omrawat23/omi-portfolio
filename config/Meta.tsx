@@ -21,7 +21,7 @@ export const siteConfig = {
     twitter: '@omrawat23',
     github: 'omrawat23',
     linkedin: 'omrawat23',
-    email: 'omrawat23@gmail.com',
+    email: 'omrawat23',
   },
   keywords: [
     'portfolio',

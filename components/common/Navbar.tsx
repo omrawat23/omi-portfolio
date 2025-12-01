@@ -13,6 +13,7 @@ import Container from "./Container";
 import { DesktopNav } from "../desktop-nav";
 import { NavItem } from "../nav";
 import { BrandContextMenu } from "../brand-context-menu";
+import { MobileNav } from "../mobile-nav";
 
 // const BrandContextMenu = dynamic(() =>
 //   import("@/components/brand-context-menu").then((mod) => mod.BrandContextMenu)
@@ -73,7 +74,7 @@ export function SiteHeader() {
           {/* <NavItemGitHub /> */}
           <span className="mx-2 flex h-4 w-px bg-border" />
           <ThemeToggle />
-          {/* <MobileNav className="sm:hidden" items={MAIN_NAV} /> */}
+          <MobileNav className="sm:hidden" items={MAIN_NAV} />
         </div>
       </div>
     </SiteHeaderWrapper>

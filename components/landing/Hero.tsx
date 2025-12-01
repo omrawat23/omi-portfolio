@@ -56,16 +56,16 @@ export default function Hero() {
 
   return (
     <Container className="mx-auto max-w-5xl">
-      <div className="relative before:absolute before:top-0 before:left-0 before:-z-1 before:h-px before:w-full before:bg-border after:absolute after:bottom-0 after:left-0 after:-z-1 after:h-px after:w-full after:bg-border flex border-x border-edge">
+      <div className="relative flex flex-row before:absolute before:top-0 before:left-0 before:-z-1 before:h-px before:w-full before:bg-border after:absolute after:bottom-0 after:left-0 after:-z-1 after:h-px after:w-full after:bg-border border-x border-edge">
         {/* Image with flag overlay */}
         <div className="shrink-0 border-r border-edge">
-          <div className="mx-0.5 my-[3px]">
+          <div className="mx-auto my-4 sm:mx-0.5 sm:my-[3px]">
             <Image
               src={USER.avatar}
               alt={`${USER.displayName}'s avatar`}
               width={100}
               height={100}
-              className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
+              className="size-24 sm:size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none"
               fetchPriority="high"
             />
           </div>
@@ -73,17 +73,17 @@ export default function Hero() {
 
         {/* Text Area */}
         <div className="flex flex-1 flex-col">
-          <div className="flex grow items-end pb-1 pl-4">
-            <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none max-sm:hidden dark:text-zinc-800">
-              {"text-3xl "}
+          <div className="flex grow items-end pb-1">
+            <div className="hidden sm:block line-clamp-1 font-mono text-xs text-zinc-300 select-none max-sm:hidden dark:text-zinc-800">
+              {/* {"text-3xl "}
               <span className="inline dark:hidden">text-zinc-950</span>
               <span className="hidden dark:inline">text-zinc-50</span>
-              {" font-medium"}
+              {" font-medium"} */}
             </div>
           </div>
 
           <div className="border-t border-edge">
-            <h1 className="flex items-center pl-4 text-3xl font-semibold">
+            <h1 className="flex items-center text-2xl sm:text-3xl font-semibold pl-4">
               {USER.displayName}
               &nbsp;
               <VerifiedIcon
@@ -92,8 +92,8 @@ export default function Hero() {
               />
             </h1>
 
-            <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
-              <FlipSentences className="font-mono text-sm text-balance text-muted-foreground">
+            <div className="h-auto border-t border-edge py-1">
+              <FlipSentences className="font-mono text-sm text-balance text-muted-foreground pl-4">
                 {USER.flipSentences}
               </FlipSentences>
             </div>
@@ -102,12 +102,8 @@ export default function Hero() {
       </div>
 
       {/* Original Text Area */}
-      <div className="flex flex-col gap-2">
-        {/* <h1 className="text-4xl font-bold">
-          Hi, I&apos;m {name} — <span className="text-secondary">{title}</span>
-        </h1> */}
-
-        <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-neutral-500 whitespace-pre-wrap">
+      <div className="flex flex-col gap-2 mt-4">
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-sm sm:text-base md:text-lg text-neutral-500 whitespace-pre-wrap">
           {renderDescription()}
         </div>
       </div>
@@ -129,18 +125,24 @@ export default function Hero() {
               )}
             >
               {IconComponent && <IconComponent />}
-              <Link href={button.href}>{button.text}</Link>
+              <Link href={button.href}>
+                <span className="block sm:hidden">
+                  {button.text === 'Resume / CV' ? 'Resume' : 'Contact'}
+                </span>
+                <span className="hidden sm:block">{button.text}</span>
+              </Link>
             </Button>
           );
         })}
       </div>
 
-      {/* Social Links */}
-      <div className="mt-8 flex gap-2">
-        
-          {SOCIAL_LINKS.map((link, index) => {
-            return <SocialLinkItem key={index} {...link} />;
-          })}
+      {/* Social Links (aligned to flex-start) */}
+      <div className="mt-8 flex flex-wrap items-start justify-start gap-2 md:gap-4">
+        {SOCIAL_LINKS.map((link, index) => (
+          <div key={index} className="w-auto">
+        <SocialLinkItem {...link} />
+          </div>
+        ))}
       </div>
     </Container>
   );

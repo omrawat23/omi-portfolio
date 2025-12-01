@@ -128,7 +128,7 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    href: 'mailto:omrawat23@gmail.com',
+    href: 'mailto:omrawat23',
     icon: <Mail />,
   },
 ];
