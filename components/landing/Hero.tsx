@@ -14,7 +14,6 @@ import Skill from '../common/Skill';
 import CV from '../svgs/CV';
 import Chat from '../svgs/Chat';
 import { Button } from '../ui/button';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 import { SocialLinkItem } from '../social-links/social-link-item';
 
 const buttonIcons = {
